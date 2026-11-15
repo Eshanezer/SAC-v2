@@ -1,0 +1,602 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SAC 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-13T09:07:46+00:00\n"
+"PO-Revision-Date: 2026-08-13T09:07:46+00:00\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"X-Domain: sac\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "SAC"
+msgstr "SAC"
+
+#. Description of the theme
+#: style.css
+msgid "A Bootstrap, ACF, and WPML-ready theme for Spirit Assembly Church in Riga."
+msgstr "Bootstrap, ACF un WPML gatava tēma Spirit Assembly Church draudzei Rīgā."
+
+#. Author of the theme
+#: style.css
+#: footer.php:20
+#: footer.php:71
+#: index.php:15
+#: page.php:14
+msgid "Spirit Assembly Church"
+msgstr "Spirit Assembly Church"
+
+#: inc/setup.php:68
+msgid "A church for Riga and the nations."
+msgstr "Draudze Rīgai un tautām."
+
+#: 404.php:15
+msgid "Page not found"
+msgstr "Lapa nav atrasta"
+
+#: 404.php:16
+msgid "The page you requested does not exist or may have moved."
+msgstr "Jūsu pieprasītā lapa neeksistē vai ir pārvietota."
+
+#: 404.php:17
+msgid "Return Home"
+msgstr "Atgriezties sākumlapā"
+
+#: archive-sac_event.php:15
+#: front-page.php:192
+msgid "Church Life"
+msgstr "Draudzes dzīve"
+
+#: archive-sac_event.php:16
+#: inc/navigation.php:97
+#: inc/post-types.php:20
+msgid "Events"
+msgstr "Pasākumi"
+
+#: archive-sac_event.php:17
+msgid "Gather, grow, and build community with Spirit Assembly Church."
+msgstr "Nāc kopā, audz ticībā un veido kopienu ar Spirit Assembly Church."
+
+#: archive-sac_event.php:34
+msgid "No events are published yet."
+msgstr "Pašlaik nav publicētu pasākumu."
+
+#: archive-sac_event.php:35
+msgid "Please check back soon."
+msgstr "Ieskatieties vēlreiz drīzumā."
+
+#: archive-sac_sermon.php:15
+#: front-page.php:226
+msgid "Grow in Faith"
+msgstr "Audz ticībā"
+
+#: archive-sac_sermon.php:16
+#: inc/navigation.php:98
+#: inc/post-types.php:41
+msgid "Messages"
+msgstr "Svētrunas"
+
+#: archive-sac_sermon.php:17
+msgid "Watch teaching and encouragement from Spirit Assembly Church."
+msgstr "Skaties mācības un iedrošinājumu no Spirit Assembly Church."
+
+#: archive-sac_sermon.php:34
+msgid "Messages will be added soon."
+msgstr "Drīzumā tiks pievienotas svētrunas."
+
+#: archive-sac_sermon.php:35
+msgid "Please check back for new teaching."
+msgstr "Ieskatieties vēlreiz, lai atrastu jaunas mācības."
+
+#: footer.php:10
+#: footer.php:21
+#: front-page.php:40
+msgid "Riga, Latvia"
+msgstr "Rīga, Latvija"
+
+#: footer.php:25
+msgid "A multilingual church community welcoming people from Riga and the nations."
+msgstr "Daudzvalodu draudzes kopiena, kas uzņem cilvēkus no Rīgas un citām tautām."
+
+#: footer.php:31
+msgid "Explore"
+msgstr "Izpēti"
+
+#: footer.php:46
+msgid "Next Steps"
+msgstr "Nākamie soļi"
+
+#: footer.php:48
+#: front-page.php:19
+#: header.php:72
+msgid "Plan a Visit"
+msgstr "Plānot apmeklējumu"
+
+#: footer.php:49
+#: front-page.php:28
+msgid "Watch Messages"
+msgstr "Skatīties svētrunas"
+
+#: footer.php:50
+msgid "Contact Us"
+msgstr "Sazinies ar mums"
+
+#: footer.php:51
+msgid "Give"
+msgstr "Ziedot"
+
+#: footer.php:56
+msgid "Gather With Us"
+msgstr "Nāc kopā ar mums"
+
+#: footer.php:64
+msgid "Get in Touch"
+msgstr "Sazināties"
+
+#: footer.php:73
+msgid "Dashboard"
+msgstr "Vadības panelis"
+
+#: footer.php:75
+msgid "Log in"
+msgstr "Pieteikties"
+
+#: front-page.php:11
+#: inc/acf.php:41
+msgid "Spirit Assembly Church · Riga"
+msgstr "Spirit Assembly Church · Rīga"
+
+#: front-page.php:12
+#: inc/acf.php:49
+msgid "Welcome home."
+msgstr "Laipni lūdzam mājās."
+
+#: front-page.php:13
+#: inc/acf.php:59
+msgid "A church for Riga and the nations—worshipping Jesus, growing in faith, and building life-giving community."
+msgstr "Draudze Rīgai un tautām — pielūdzam Jēzu, augam ticībā un veidojam dzīvību dodošu kopienu."
+
+#: front-page.php:33
+#: inc/acf.php:100
+msgid "A place to encounter God and find family."
+msgstr "Vieta, kur sastapt Dievu un atrast ģimeni."
+
+#: front-page.php:34
+#: inc/acf.php:111
+msgid "Whatever your background or story, you are welcome to discover faith and community with us in Riga."
+msgstr "Neatkarīgi no tavas pieredzes vai dzīvesstāsta, esi laipni aicināts iepazīt ticību un kopienu kopā ar mums Rīgā."
+
+#: front-page.php:36
+#: inc/acf.php:136
+msgid "Join us in Riga"
+msgstr "Pievienojies mums Rīgā"
+
+#: front-page.php:37
+#: inc/acf.php:146
+msgid "Come as you are. Our team will be ready to welcome you and help you find your way."
+msgstr "Nāc tāds, kāds esi. Mūsu komanda tevi sagaidīs un palīdzēs iejusties."
+
+#: front-page.php:38
+msgid "Sunday gathering"
+msgstr "Svētdienas dievkalpojums"
+
+#: front-page.php:39
+msgid "Service time will be announced soon."
+msgstr "Dievkalpojuma laiks drīzumā tiks paziņots."
+
+#: front-page.php:46
+msgid "Plan Your Visit"
+msgstr "Plāno savu apmeklējumu"
+
+#: front-page.php:55
+msgid "Watch Online"
+msgstr "Skaties tiešsaistē"
+
+#: front-page.php:60
+#: inc/acf.php:209
+msgid "There is a place for you here."
+msgstr "Šeit ir vieta arī tev."
+
+#: front-page.php:61
+#: inc/acf.php:219
+msgid "Take your next step, ask a question, or let us know how we can pray with you."
+msgstr "Sper nākamo soli, uzdod jautājumu vai pastāsti, kā varam lūgt kopā ar tevi."
+
+#: front-page.php:66
+msgid "Connect With Us"
+msgstr "Sazinies ar mums"
+
+#: front-page.php:115
+msgid "Quick links"
+msgstr "Ātrās saites"
+
+#: front-page.php:119
+msgid "First time?"
+msgstr "Pirmo reizi?"
+
+#: front-page.php:120
+msgid "Plan your visit"
+msgstr "Plāno savu apmeklējumu"
+
+#: front-page.php:123
+msgid "Be encouraged"
+msgstr "Gūsti iedrošinājumu"
+
+#: front-page.php:124
+msgid "Watch messages"
+msgstr "Skaties svētrunas"
+
+#: front-page.php:127
+msgid "Find community"
+msgstr "Atrodi kopienu"
+
+#: front-page.php:128
+msgid "Get connected"
+msgstr "Iesaisties"
+
+#: front-page.php:149
+#: inc/acf.php:90
+msgid "Welcome"
+msgstr "Laipni lūdzam"
+
+#: front-page.php:152
+msgid "Discover Our Story"
+msgstr "Iepazīsti mūsu stāstu"
+
+#: front-page.php:162
+msgid "This Sunday"
+msgstr "Šo svētdien"
+
+#: front-page.php:169
+msgid "Gathering"
+msgstr "Dievkalpojums"
+
+#: front-page.php:193
+msgid "Upcoming events"
+msgstr "Gaidāmie pasākumi"
+
+#: front-page.php:195
+msgid "See All Events"
+msgstr "Skatīt visus pasākumus"
+
+#: front-page.php:209
+msgid "New events are coming soon."
+msgstr "Drīzumā būs jauni pasākumi."
+
+#: front-page.php:210
+msgid "Check back for worship gatherings, conferences, and opportunities to connect."
+msgstr "Ieskaties vēlreiz, lai uzzinātu par dievkalpojumiem, konferencēm un iespējām iesaistīties."
+
+#: front-page.php:213
+msgid "Stay Connected"
+msgstr "Esi saziņā"
+
+#: front-page.php:227
+msgid "Latest messages"
+msgstr "Jaunākās svētrunas"
+
+#: front-page.php:229
+msgid "Browse Messages"
+msgstr "Skatīt svētrunas"
+
+#: front-page.php:246
+#: inc/post-types.php:42
+#: single-sac_sermon.php:23
+#: template-parts/card-sermon.php:20
+msgid "Message"
+msgstr "Svētruna"
+
+#: front-page.php:247
+msgid "Messages will be added soon"
+msgstr "Drīzumā tiks pievienotas svētrunas"
+
+#: front-page.php:248
+msgid "Watch teaching from Spirit Assembly Church here."
+msgstr "Šeit skaties Spirit Assembly Church mācības."
+
+#: header.php:20
+msgid "Skip to content"
+msgstr "Pāriet uz saturu"
+
+#: header.php:27
+msgid "Spirit Assembly Church · Riga, Latvia"
+msgstr "Spirit Assembly Church · Rīga, Latvija"
+
+#: header.php:36
+msgid "Primary navigation"
+msgstr "Galvenā navigācija"
+
+#: header.php:50
+msgid "Spirit Assembly"
+msgstr "Spirit Assembly"
+
+#: header.php:51
+msgid "Church Riga"
+msgstr "Draudze Rīgā"
+
+#: header.php:55
+msgid "Toggle navigation"
+msgstr "Atvērt vai aizvērt navigāciju"
+
+#: inc/acf.php:27
+msgid "Homepage Content"
+msgstr "Sākumlapas saturs"
+
+#: inc/acf.php:31
+msgid "Hero"
+msgstr "Galvenais bloks"
+
+#: inc/acf.php:38
+#: inc/acf.php:254
+msgid "Eyebrow"
+msgstr "Virsraksta ievads"
+
+#: inc/acf.php:46
+msgid "Title"
+msgstr "Virsraksts"
+
+#: inc/acf.php:54
+#: inc/acf.php:141
+#: inc/acf.php:261
+msgid "Introduction"
+msgstr "Ievads"
+
+#: inc/acf.php:64
+msgid "Background Image"
+msgstr "Fona attēls"
+
+#: inc/acf.php:74
+msgid "Primary Button"
+msgstr "Galvenā poga"
+
+#: inc/acf.php:82
+msgid "Secondary Button"
+msgstr "Sekundārā poga"
+
+#: inc/acf.php:97
+#: inc/acf.php:133
+#: inc/acf.php:206
+msgid "Heading"
+msgstr "Virsraksts"
+
+#: inc/acf.php:105
+#: inc/acf.php:214
+msgid "Text"
+msgstr "Teksts"
+
+#: inc/acf.php:116
+msgid "Image"
+msgstr "Attēls"
+
+#: inc/acf.php:126
+msgid "Visit Information"
+msgstr "Apmeklējuma informācija"
+
+#: inc/acf.php:151
+msgid "Main Service Time"
+msgstr "Galvenā dievkalpojuma laiks"
+
+#: inc/acf.php:154
+msgid "Sunday · 11:00"
+msgstr "Svētdiena · 11.00"
+
+#: inc/acf.php:159
+msgid "Service Note"
+msgstr "Piezīme par dievkalpojumu"
+
+#: inc/acf.php:162
+msgid "Worship, message, prayer, and kids programme"
+msgstr "Slavēšana, svētruna, lūgšana un bērnu programma"
+
+#: inc/acf.php:167
+msgid "Location Name"
+msgstr "Vietas nosaukums"
+
+#: inc/acf.php:174
+#: inc/acf.php:331
+msgid "Address"
+msgstr "Adrese"
+
+#: inc/acf.php:183
+msgid "Directions Button"
+msgstr "Norāžu poga"
+
+#: inc/acf.php:191
+msgid "Livestream Button"
+msgstr "Tiešraides poga"
+
+#: inc/acf.php:199
+msgid "Closing Call to Action"
+msgstr "Noslēguma aicinājums"
+
+#: inc/acf.php:224
+msgid "Button"
+msgstr "Poga"
+
+#: inc/acf.php:250
+msgid "Page Header"
+msgstr "Lapas galvene"
+
+#: inc/acf.php:270
+msgid "Header Image"
+msgstr "Galvenes attēls"
+
+#: inc/acf.php:300
+#: single-sac_event.php:48
+msgid "Event Details"
+msgstr "Pasākuma informācija"
+
+#: inc/acf.php:304
+msgid "Starts"
+msgstr "Sākums"
+
+#: inc/acf.php:314
+msgid "Ends"
+msgstr "Beigas"
+
+#: inc/acf.php:324
+msgid "Location"
+msgstr "Vieta"
+
+#: inc/acf.php:340
+msgid "Registration Button"
+msgstr "Reģistrācijas poga"
+
+#: inc/acf.php:364
+msgid "Message Details"
+msgstr "Svētrunas informācija"
+
+#: inc/acf.php:368
+msgid "Speaker"
+msgstr "Runātājs"
+
+#: inc/acf.php:375
+msgid "Service Date"
+msgstr "Dievkalpojuma datums"
+
+#: inc/acf.php:385
+msgid "Scripture"
+msgstr "Rakstu vieta"
+
+#: inc/acf.php:392
+msgid "Video URL"
+msgstr "Video URL"
+
+#: inc/acf.php:423
+msgid "SAC theme: activate Advanced Custom Fields to edit structured church content."
+msgstr "SAC tēma: aktivizējiet Advanced Custom Fields, lai rediģētu strukturēto draudzes saturu."
+
+#: inc/navigation.php:94
+msgid "Home"
+msgstr "Sākums"
+
+#: inc/navigation.php:95
+msgid "New Here"
+msgstr "Pirmo reizi?"
+
+#: inc/navigation.php:96
+msgid "About"
+msgstr "Par mums"
+
+#: inc/navigation.php:99
+msgid "Contact"
+msgstr "Kontakti"
+
+#: inc/navigation.php:127
+msgid "Languages"
+msgstr "Valodas"
+
+#: inc/post-types.php:21
+#: single-sac_event.php:31
+msgid "Event"
+msgstr "Pasākums"
+
+#: inc/post-types.php:22
+msgid "Add New Event"
+msgstr "Pievienot jaunu pasākumu"
+
+#: inc/post-types.php:23
+msgid "Edit Event"
+msgstr "Rediģēt pasākumu"
+
+#: inc/post-types.php:24
+msgid "View Event"
+msgstr "Skatīt pasākumu"
+
+#: inc/post-types.php:25
+msgid "Search Events"
+msgstr "Meklēt pasākumus"
+
+#: inc/post-types.php:43
+msgid "Add New Message"
+msgstr "Pievienot jaunu svētrunu"
+
+#: inc/post-types.php:44
+msgid "Edit Message"
+msgstr "Rediģēt svētrunu"
+
+#: inc/post-types.php:45
+msgid "View Message"
+msgstr "Skatīt svētrunu"
+
+#: inc/post-types.php:46
+msgid "Search Messages"
+msgstr "Meklēt svētrunas"
+
+#: inc/setup.php:50
+msgid "Primary menu"
+msgstr "Galvenā izvēlne"
+
+#: inc/setup.php:51
+msgid "Footer menu"
+msgstr "Kājenes izvēlne"
+
+#: index.php:16
+msgid "Latest Updates"
+msgstr "Jaunākās ziņas"
+
+#: index.php:44
+msgid "Nothing has been published yet."
+msgstr "Vēl nekas nav publicēts."
+
+#: single-sac_event.php:22
+msgid "Register"
+msgstr "Reģistrēties"
+
+#: single-sac_event.php:49
+msgid "Starts:"
+msgstr "Sākums:"
+
+#: single-sac_event.php:50
+msgid "Ends:"
+msgstr "Beigas:"
+
+#: single-sac_event.php:51
+msgid "Location:"
+msgstr "Vieta:"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr "Melna"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Charcoal"
+msgstr "Ogles pelēka"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gold"
+msgstr "Zelta"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Champagne"
+msgstr "Šampanieša"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ivory"
+msgstr "Ziloņkaula"
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr "Balta"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Sans"
+msgstr "Sistēmas bezserifa"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Editorial Serif"
+msgstr "Redakcionālais serif"

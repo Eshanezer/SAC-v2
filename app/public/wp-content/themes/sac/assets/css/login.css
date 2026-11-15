@@ -1,0 +1,96 @@
+:root {
+	--sac-login-logo: none;
+	--sac-login-logo-size: 14rem auto;
+	--sac-login-black: #08090b;
+	--sac-login-charcoal: #121419;
+	--sac-login-gold: #d6aa55;
+	--sac-login-champagne: #f0d28e;
+	--sac-login-ivory: #f7f3e9;
+}
+
+body.login {
+	background:
+		radial-gradient(circle at 72% 22%, rgba(214, 170, 85, 0.3), transparent 30rem),
+		linear-gradient(145deg, var(--sac-login-black), var(--sac-login-charcoal));
+	color: var(--sac-login-charcoal);
+}
+
+.login h1 a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 14rem;
+	height: 10rem;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	border: 0;
+	border-radius: 0;
+	background-color: transparent;
+	background-image: var(--sac-login-logo);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: var(--sac-login-logo-size);
+	color: var(--sac-login-gold);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 0;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	text-indent: 0;
+	box-shadow: none;
+}
+
+.login h1 a::before {
+	display: none;
+	content: "";
+}
+
+.login form {
+	border: 1px solid rgba(214, 170, 85, 0.2);
+	border-radius: 1rem;
+	background: var(--sac-login-ivory);
+	box-shadow: 0 1.25rem 3.5rem rgba(0, 0, 0, 0.28);
+}
+
+.login label {
+	color: var(--sac-login-charcoal);
+	font-weight: 600;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+	border-color: rgba(18, 20, 25, 0.25);
+	border-radius: 0.55rem;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+	border-color: var(--sac-login-gold);
+	box-shadow: 0 0 0 1px var(--sac-login-gold);
+}
+
+.wp-core-ui .button-primary {
+	border-color: var(--sac-login-gold);
+	border-radius: 999px;
+	background: var(--sac-login-gold);
+	color: var(--sac-login-black);
+	font-weight: 700;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+	border-color: var(--sac-login-champagne);
+	background: var(--sac-login-champagne);
+	color: var(--sac-login-black);
+}
+
+.login #backtoblog a,
+.login #nav a,
+.login .privacy-policy-page-link a {
+	color: rgba(255, 255, 255, 0.78);
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover,
+.login .privacy-policy-page-link a:hover {
+	color: var(--sac-login-gold);
+}

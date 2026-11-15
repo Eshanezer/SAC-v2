@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Lapas galvene'=>['urls'=>[],'names'=>['group-group_sac_page_header-title-955bf0c346e3bf22ea061d298d9c57e8'],'cmp'=>['WordPress',3]],'Шапка страницы'=>['urls'=>[],'names'=>['group-group_sac_page_header-title-d932d9779a02dd5a0ff2eb6c7d5fe715'],'cmp'=>['WordPress',3]],'Надзаголовок'=>['urls'=>[],'names'=>['field-field_sac_page_eyebrow-label-7caecb4a2626fb85131a734f5ed35aa4'],'cmp'=>['WordPress',3]],'Введение'=>['urls'=>[],'names'=>['field-field_sac_page_intro-label-970eec97eb964970c9e36718553d31dc'],'cmp'=>['WordPress',3]]]];

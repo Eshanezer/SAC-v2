@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "48rem",
+      "wideSize": "80rem"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "black", "name": "Black", "color": "#08090b" },
+        { "slug": "charcoal", "name": "Charcoal", "color": "#121419" },
+        { "slug": "gold", "name": "Gold", "color": "#d6aa55" },
+        { "slug": "champagne", "name": "Champagne", "color": "#f0d28e" },
+        { "slug": "ivory", "name": "Ivory", "color": "#f7f3e9" },
+        { "slug": "white", "name": "White", "color": "#ffffff" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "em", "%", "vw", "vh"]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "System Sans",
+          "fontFamily": "'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+        },
+        {
+          "slug": "serif",
+          "name": "Editorial Serif",
+          "fontFamily": "Georgia, 'Times New Roman', serif"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#f7f3e9",
+      "text": "#171614"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "lineHeight": "1.7"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|serif",
+          "fontWeight": "600",
+          "lineHeight": "1.08"
+        }
+      },
+      "link": {
+        "color": { "text": "#7f591f" }
+      }
+    }
+  }
+}

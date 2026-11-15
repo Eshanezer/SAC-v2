@@ -1,0 +1,603 @@
+# Copyright (C) 2026 Spirit Assembly Church
+# This file is distributed under the same license as the SAC theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: SAC 0.3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sac\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-13T09:07:03+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: sac\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "SAC"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A Bootstrap, ACF, and WPML-ready theme for Spirit Assembly Church in Riga."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+#: footer.php:20
+#: footer.php:71
+#: index.php:15
+#: page.php:14
+msgid "Spirit Assembly Church"
+msgstr ""
+
+#: 404.php:15
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:16
+msgid "The page you requested does not exist or may have moved."
+msgstr ""
+
+#: 404.php:17
+msgid "Return Home"
+msgstr ""
+
+#: archive-sac_event.php:15
+#: front-page.php:192
+msgid "Church Life"
+msgstr ""
+
+#: archive-sac_event.php:16
+#: inc/navigation.php:97
+#: inc/post-types.php:20
+msgid "Events"
+msgstr ""
+
+#: archive-sac_event.php:17
+msgid "Gather, grow, and build community with Spirit Assembly Church."
+msgstr ""
+
+#: archive-sac_event.php:34
+msgid "No events are published yet."
+msgstr ""
+
+#: archive-sac_event.php:35
+msgid "Please check back soon."
+msgstr ""
+
+#: archive-sac_sermon.php:15
+#: front-page.php:226
+msgid "Grow in Faith"
+msgstr ""
+
+#: archive-sac_sermon.php:16
+#: inc/navigation.php:98
+#: inc/post-types.php:41
+msgid "Messages"
+msgstr ""
+
+#: archive-sac_sermon.php:17
+msgid "Watch teaching and encouragement from Spirit Assembly Church."
+msgstr ""
+
+#: archive-sac_sermon.php:34
+msgid "Messages will be added soon."
+msgstr ""
+
+#: archive-sac_sermon.php:35
+msgid "Please check back for new teaching."
+msgstr ""
+
+#: footer.php:10
+#: footer.php:21
+#: front-page.php:40
+msgid "Riga, Latvia"
+msgstr ""
+
+#: footer.php:25
+msgid "A multilingual church community welcoming people from Riga and the nations."
+msgstr ""
+
+#: footer.php:31
+msgid "Explore"
+msgstr ""
+
+#: footer.php:46
+msgid "Next Steps"
+msgstr ""
+
+#: footer.php:48
+#: front-page.php:19
+#: header.php:72
+msgid "Plan a Visit"
+msgstr ""
+
+#: footer.php:49
+#: front-page.php:28
+msgid "Watch Messages"
+msgstr ""
+
+#: footer.php:50
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php:51
+msgid "Give"
+msgstr ""
+
+#: footer.php:56
+msgid "Gather With Us"
+msgstr ""
+
+#: footer.php:64
+msgid "Get in Touch"
+msgstr ""
+
+#: footer.php:73
+msgid "Dashboard"
+msgstr ""
+
+#: footer.php:75
+msgid "Log in"
+msgstr ""
+
+#: front-page.php:11
+#: inc/acf.php:41
+msgid "Spirit Assembly Church · Riga"
+msgstr ""
+
+#: front-page.php:12
+#: inc/acf.php:49
+msgid "Welcome home."
+msgstr ""
+
+#: front-page.php:13
+#: inc/acf.php:59
+msgid "A church for Riga and the nations—worshipping Jesus, growing in faith, and building life-giving community."
+msgstr ""
+
+#: front-page.php:33
+#: inc/acf.php:100
+msgid "A place to encounter God and find family."
+msgstr ""
+
+#: front-page.php:34
+#: inc/acf.php:111
+msgid "Whatever your background or story, you are welcome to discover faith and community with us in Riga."
+msgstr ""
+
+#: front-page.php:36
+#: inc/acf.php:136
+msgid "Join us in Riga"
+msgstr ""
+
+#: front-page.php:37
+#: inc/acf.php:146
+msgid "Come as you are. Our team will be ready to welcome you and help you find your way."
+msgstr ""
+
+#: front-page.php:38
+msgid "Sunday gathering"
+msgstr ""
+
+#: front-page.php:39
+msgid "Service time will be announced soon."
+msgstr ""
+
+#: front-page.php:46
+msgid "Plan Your Visit"
+msgstr ""
+
+#: front-page.php:55
+msgid "Watch Online"
+msgstr ""
+
+#: front-page.php:60
+#: inc/acf.php:209
+msgid "There is a place for you here."
+msgstr ""
+
+#: front-page.php:61
+#: inc/acf.php:219
+msgid "Take your next step, ask a question, or let us know how we can pray with you."
+msgstr ""
+
+#: front-page.php:66
+msgid "Connect With Us"
+msgstr ""
+
+#: front-page.php:115
+msgid "Quick links"
+msgstr ""
+
+#: front-page.php:119
+msgid "First time?"
+msgstr ""
+
+#: front-page.php:120
+msgid "Plan your visit"
+msgstr ""
+
+#: front-page.php:123
+msgid "Be encouraged"
+msgstr ""
+
+#: front-page.php:124
+msgid "Watch messages"
+msgstr ""
+
+#: front-page.php:127
+msgid "Find community"
+msgstr ""
+
+#: front-page.php:128
+msgid "Get connected"
+msgstr ""
+
+#: front-page.php:149
+#: inc/acf.php:90
+msgid "Welcome"
+msgstr ""
+
+#: front-page.php:152
+msgid "Discover Our Story"
+msgstr ""
+
+#: front-page.php:162
+msgid "This Sunday"
+msgstr ""
+
+#: front-page.php:169
+msgid "Gathering"
+msgstr ""
+
+#: front-page.php:193
+msgid "Upcoming events"
+msgstr ""
+
+#: front-page.php:195
+msgid "See All Events"
+msgstr ""
+
+#: front-page.php:209
+msgid "New events are coming soon."
+msgstr ""
+
+#: front-page.php:210
+msgid "Check back for worship gatherings, conferences, and opportunities to connect."
+msgstr ""
+
+#: front-page.php:213
+msgid "Stay Connected"
+msgstr ""
+
+#: front-page.php:227
+msgid "Latest messages"
+msgstr ""
+
+#: front-page.php:229
+msgid "Browse Messages"
+msgstr ""
+
+#: front-page.php:246
+#: inc/post-types.php:42
+#: single-sac_sermon.php:23
+#: template-parts/card-sermon.php:20
+msgid "Message"
+msgstr ""
+
+#: front-page.php:247
+msgid "Messages will be added soon"
+msgstr ""
+
+#: front-page.php:248
+msgid "Watch teaching from Spirit Assembly Church here."
+msgstr ""
+
+#: header.php:20
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:27
+msgid "Spirit Assembly Church · Riga, Latvia"
+msgstr ""
+
+#: header.php:36
+msgid "Primary navigation"
+msgstr ""
+
+#: header.php:50
+msgid "Spirit Assembly"
+msgstr ""
+
+#: header.php:51
+msgid "Church Riga"
+msgstr ""
+
+#: header.php:55
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/acf.php:27
+msgid "Homepage Content"
+msgstr ""
+
+#: inc/acf.php:31
+msgid "Hero"
+msgstr ""
+
+#: inc/acf.php:38
+#: inc/acf.php:254
+msgid "Eyebrow"
+msgstr ""
+
+#: inc/acf.php:46
+msgid "Title"
+msgstr ""
+
+#: inc/acf.php:54
+#: inc/acf.php:141
+#: inc/acf.php:261
+msgid "Introduction"
+msgstr ""
+
+#: inc/acf.php:64
+msgid "Background Image"
+msgstr ""
+
+#: inc/acf.php:74
+msgid "Primary Button"
+msgstr ""
+
+#: inc/acf.php:82
+msgid "Secondary Button"
+msgstr ""
+
+#: inc/acf.php:97
+#: inc/acf.php:133
+#: inc/acf.php:206
+msgid "Heading"
+msgstr ""
+
+#: inc/acf.php:105
+#: inc/acf.php:214
+msgid "Text"
+msgstr ""
+
+#: inc/acf.php:116
+msgid "Image"
+msgstr ""
+
+#: inc/acf.php:126
+msgid "Visit Information"
+msgstr ""
+
+#: inc/acf.php:151
+msgid "Main Service Time"
+msgstr ""
+
+#: inc/acf.php:154
+msgid "Sunday · 11:00"
+msgstr ""
+
+#: inc/acf.php:159
+msgid "Service Note"
+msgstr ""
+
+#: inc/acf.php:162
+msgid "Worship, message, prayer, and kids programme"
+msgstr ""
+
+#: inc/acf.php:167
+msgid "Location Name"
+msgstr ""
+
+#: inc/acf.php:174
+#: inc/acf.php:331
+msgid "Address"
+msgstr ""
+
+#: inc/acf.php:183
+msgid "Directions Button"
+msgstr ""
+
+#: inc/acf.php:191
+msgid "Livestream Button"
+msgstr ""
+
+#: inc/acf.php:199
+msgid "Closing Call to Action"
+msgstr ""
+
+#: inc/acf.php:224
+msgid "Button"
+msgstr ""
+
+#: inc/acf.php:250
+msgid "Page Header"
+msgstr ""
+
+#: inc/acf.php:270
+msgid "Header Image"
+msgstr ""
+
+#: inc/acf.php:300
+#: single-sac_event.php:48
+msgid "Event Details"
+msgstr ""
+
+#: inc/acf.php:304
+msgid "Starts"
+msgstr ""
+
+#: inc/acf.php:314
+msgid "Ends"
+msgstr ""
+
+#: inc/acf.php:324
+msgid "Location"
+msgstr ""
+
+#: inc/acf.php:340
+msgid "Registration Button"
+msgstr ""
+
+#: inc/acf.php:364
+msgid "Message Details"
+msgstr ""
+
+#: inc/acf.php:368
+msgid "Speaker"
+msgstr ""
+
+#: inc/acf.php:375
+msgid "Service Date"
+msgstr ""
+
+#: inc/acf.php:385
+msgid "Scripture"
+msgstr ""
+
+#: inc/acf.php:392
+msgid "Video URL"
+msgstr ""
+
+#: inc/acf.php:423
+msgid "SAC theme: activate Advanced Custom Fields to edit structured church content."
+msgstr ""
+
+#: inc/navigation.php:94
+msgid "Home"
+msgstr ""
+
+#: inc/navigation.php:95
+msgid "New Here"
+msgstr ""
+
+#: inc/navigation.php:96
+msgid "About"
+msgstr ""
+
+#: inc/navigation.php:99
+msgid "Contact"
+msgstr ""
+
+#: inc/navigation.php:127
+msgid "Languages"
+msgstr ""
+
+#: inc/post-types.php:21
+#: single-sac_event.php:31
+msgid "Event"
+msgstr ""
+
+#: inc/post-types.php:22
+msgid "Add New Event"
+msgstr ""
+
+#: inc/post-types.php:23
+msgid "Edit Event"
+msgstr ""
+
+#: inc/post-types.php:24
+msgid "View Event"
+msgstr ""
+
+#: inc/post-types.php:25
+msgid "Search Events"
+msgstr ""
+
+#: inc/post-types.php:43
+msgid "Add New Message"
+msgstr ""
+
+#: inc/post-types.php:44
+msgid "Edit Message"
+msgstr ""
+
+#: inc/post-types.php:45
+msgid "View Message"
+msgstr ""
+
+#: inc/post-types.php:46
+msgid "Search Messages"
+msgstr ""
+
+#: inc/setup.php:50
+msgid "Primary menu"
+msgstr ""
+
+#: inc/setup.php:51
+msgid "Footer menu"
+msgstr ""
+
+#: inc/setup.php:68
+msgid "A church for Riga and the nations."
+msgstr ""
+
+#: index.php:16
+msgid "Latest Updates"
+msgstr ""
+
+#: index.php:44
+msgid "Nothing has been published yet."
+msgstr ""
+
+#: single-sac_event.php:22
+msgid "Register"
+msgstr ""
+
+#: single-sac_event.php:49
+msgid "Starts:"
+msgstr ""
+
+#: single-sac_event.php:50
+msgid "Ends:"
+msgstr ""
+
+#: single-sac_event.php:51
+msgid "Location:"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Charcoal"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gold"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Champagne"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ivory"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Editorial Serif"
+msgstr ""
