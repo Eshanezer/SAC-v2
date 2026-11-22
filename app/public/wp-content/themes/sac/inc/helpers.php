@@ -97,6 +97,55 @@ function sac_field( string $name, mixed $fallback = '', int|string $post_id = 0 
 }
 
 /**
+ * Retrieve contact and social media information.
+ * Prioritizes:
+ * 1. Backend (BE) Contact Page ACF field (post meta).
+ * 2. Backend (BE) SAC Settings option (wp_options).
+ * 3. Environment variable (.env).
+ * 4. Default fallback.
+ *
+ * @param string     $key_or_env Field name or env key (e.g. 'sac_contact_phone', 'CONTACT_EMAIL').
+ * @param string     $acf_name   Optional explicit ACF field name.
+ * @param mixed      $default    Default fallback value.
+ * @param int|string $post_id    Optional post ID.
+ * @return mixed
+ */
+function sac_contact_info( string $key_or_env, string $acf_name = '', mixed $default = '', int|string $post_id = 0 ): mixed {
+	$clean        = strtolower( (string) preg_replace( '/^(sac_)?(contact_|social_)?/i', '', $acf_name ?: $key_or_env ) );
+	$is_social    = in_array( $clean, array( 'facebook', 'instagram', 'youtube', 'tiktok' ), true );
+	$resolved_acf = $acf_name ?: ( 'sac_' . ( $is_social ? 'social_' : 'contact_' ) . $clean );
+	$resolved_env = strtoupper( ( $is_social ? 'SOCIAL_' : 'CONTACT_' ) . $clean );
+
+	// 1. Check Backend (BE) ACF field on the Contact Page
+	if ( function_exists( 'get_field' ) ) {
+		$target_id = $post_id ?: ( is_page_template( 'page-contact.php' ) ? get_the_ID() : sac_page_id( 'contact' ) );
+		if ( $target_id > 0 ) {
+			$acf_val = get_field( $resolved_acf, $target_id );
+			if ( false !== $acf_val && null !== $acf_val && '' !== $acf_val ) {
+				return $acf_val;
+			}
+		}
+	}
+
+	// 2. Check Backend (BE) Theme Settings (SAC Settings in WP-Admin)
+	$option_val = get_option( $resolved_acf );
+	if ( false !== $option_val && null !== $option_val && '' !== $option_val ) {
+		return $option_val;
+	}
+
+	// 3. Fallback to .env configuration if unset in Backend
+	if ( function_exists( 'env' ) ) {
+		$env_val = env( $resolved_env );
+		if ( false !== $env_val && null !== $env_val && '' !== $env_val ) {
+			return $env_val;
+		}
+	}
+
+	// 4. Default fallback
+	return $default;
+}
+
+/**
  * Normalize an ACF link value.
  *
  * @param string $name     Field name.

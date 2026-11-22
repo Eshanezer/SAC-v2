@@ -1,0 +1,10 @@
+# Block direct web access to all log and sensitive files in wp-content
+<FilesMatch "(?i)\.(log|sql|bak|old|env.*)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Deny,Allow
+        Deny from all
+    </IfModule>
+</FilesMatch>

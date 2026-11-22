@@ -44,12 +44,15 @@ function sac_handle_contact_form(): void {
 	}
 
 	$page       = get_page_by_path( 'contact' );
-	$recipient  = (string) sac_field( 'sac_contact_email', 'info@spiritassemblychurch.com', $page instanceof WP_Post ? $page->ID : 0 );
+	$page_id    = $page instanceof WP_Post ? $page->ID : 0;
+	$recipient  = (string) sac_contact_info( 'CONTACT_EMAIL', 'sac_contact_email', 'info@spiritassemblychurch.com', $page_id );
+	$from_email = (string) sac_contact_info( 'MAIL_FROM_ADDRESS', '', sac_contact_info( 'CONTACT_EMAIL', '', 'info@spiritassemblychurch.com' ) );
 	$mail_title = sprintf( '[%s] %s', wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ), $subject ?: __( 'Website enquiry', 'sac' ) );
 	$mail_body  = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\n\n{$message}";
+	$clean_name = addcslashes( str_replace( array( "\r", "\n" ), '', $name ), '"\\' );
 	$headers    = array(
-		'Reply-To: ' . $name . ' <' . $email . '>',
-		'From: ' . wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ) . ' <info@spiritassemblychurch.com>',
+		'Reply-To: "' . $clean_name . '" <' . $email . '>',
+		'From: ' . wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ) . ' <' . $from_email . '>',
 	);
 	$sent       = wp_mail( sanitize_email( $recipient ), $mail_title, $mail_body, $headers );
 

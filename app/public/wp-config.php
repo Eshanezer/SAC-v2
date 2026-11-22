@@ -153,6 +153,9 @@ if ( ! defined( 'WP_DEBUG_DISPLAY' ) ) {
 if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) {
 	define( 'DISALLOW_FILE_EDIT', (bool) env( 'DISALLOW_FILE_EDIT', true ) );
 }
+if ( ! defined( 'FORCE_SSL_ADMIN' ) && env( 'FORCE_SSL_ADMIN' ) !== null ) {
+	define( 'FORCE_SSL_ADMIN', (bool) env( 'FORCE_SSL_ADMIN' ) );
+}
 
 // ---------------------------------------------------------------------
 // 7. Optional SMTP Mail Provider Configuration

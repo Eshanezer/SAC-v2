@@ -46,6 +46,80 @@ function sac_register_theme_settings(): void {
 		'sac-settings',
 		'sac_navigation_settings'
 	);
+
+	// Contact Settings Section
+	add_settings_section(
+		'sac_contact_settings',
+		__( 'Contact Information', 'sac' ),
+		static function (): void {
+			$contact_page = get_page_by_path( 'contact' );
+			$edit_link    = $contact_page instanceof WP_Post ? get_edit_post_link( $contact_page->ID ) : '';
+			echo '<p>' . esc_html__( 'Configure church contact details. These can also be edited directly on the Contact page in the Backend.', 'sac' );
+			if ( $edit_link ) {
+				echo ' <a href="' . esc_url( $edit_link ) . '">' . esc_html__( 'Edit Contact Page in BE &rarr;', 'sac' ) . '</a>';
+			}
+			echo '</p>';
+		},
+		'sac-settings'
+	);
+
+	register_setting( 'sac_settings', 'sac_contact_phone', array( 'type' => 'string', 'sanitize_callback' => 'sanitize_text_field' ) );
+	register_setting( 'sac_settings', 'sac_contact_email', array( 'type' => 'string', 'sanitize_callback' => 'sanitize_email' ) );
+
+	add_settings_field(
+		'sac_contact_phone',
+		__( 'Church Phone', 'sac' ),
+		static function (): void {
+			$value = get_option( 'sac_contact_phone', '' );
+			echo '<input class="regular-text" type="text" name="sac_contact_phone" value="' . esc_attr( (string) $value ) . '" placeholder="+371 22089000">';
+		},
+		'sac-settings',
+		'sac_contact_settings'
+	);
+
+	add_settings_field(
+		'sac_contact_email',
+		__( 'Contact Email', 'sac' ),
+		static function (): void {
+			$value = get_option( 'sac_contact_email', '' );
+			echo '<input class="regular-text" type="email" name="sac_contact_email" value="' . esc_attr( (string) $value ) . '" placeholder="info@spiritassemblychurch.com">';
+			echo '<p class="description">' . esc_html__( 'Default recipient email for the contact page and public inquiries.', 'sac' ) . '</p>';
+		},
+		'sac-settings',
+		'sac_contact_settings'
+	);
+
+	// Social Media Settings Section
+	add_settings_section(
+		'sac_social_settings',
+		__( 'Social Media Links', 'sac' ),
+		static function (): void {
+			echo '<p>' . esc_html__( 'Configure church social media links shown in the header, footer, and contact section.', 'sac' ) . '</p>';
+		},
+		'sac-settings'
+	);
+
+	$networks = array(
+		'facebook'  => array( __( 'Facebook URL', 'sac' ), 'https://bit.ly/3ek5Edk' ),
+		'instagram' => array( __( 'Instagram URL', 'sac' ), 'https://bit.ly/2U32Daz' ),
+		'youtube'   => array( __( 'YouTube URL', 'sac' ), 'https://bit.ly/3wEWzlL' ),
+		'tiktok'    => array( __( 'TikTok URL', 'sac' ), 'https://bit.ly/42Taw2M' ),
+	);
+
+	foreach ( $networks as $network => $info ) {
+		$opt_key = 'sac_social_' . $network;
+		register_setting( 'sac_settings', $opt_key, array( 'type' => 'string', 'sanitize_callback' => 'esc_url_raw' ) );
+		add_settings_field(
+			$opt_key,
+			$info[0],
+			static function () use ( $opt_key, $info ): void {
+				$value = get_option( $opt_key, '' );
+				echo '<input class="regular-text" type="url" name="' . esc_attr( $opt_key ) . '" value="' . esc_attr( (string) $value ) . '" placeholder="' . esc_attr( $info[1] ) . '">';
+			},
+			'sac-settings',
+			'sac_social_settings'
+		);
+	}
 }
 add_action( 'admin_init', 'sac_register_theme_settings' );
 

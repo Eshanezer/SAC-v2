@@ -13,8 +13,8 @@ while ( have_posts() ) :
 
 	$eyebrow       = (string) sac_field( 'sac_page_eyebrow', __( 'Connect with us', 'sac' ) );
 	$intro         = (string) sac_field( 'sac_page_intro', __( 'We would love to hear from you, pray with you, and help you take your next step.', 'sac' ) );
-	$phone         = (string) sac_field( 'sac_contact_phone', '+371 22089000' );
-	$email         = (string) sac_field( 'sac_contact_email', 'info@spiritassemblychurch.com' );
+	$phone         = (string) sac_contact_info( 'CONTACT_PHONE', 'sac_contact_phone', '+371 22089000' );
+	$email         = (string) sac_contact_info( 'CONTACT_EMAIL', 'sac_contact_email', 'info@spiritassemblychurch.com' );
 	$contact_title = (string) sac_field( 'sac_contact_title', __( 'Let’s start a conversation.', 'sac' ) );
 	$contact_text  = (string) sac_field( 'sac_contact_text', __( 'Whether you have a question, need prayer, or want to know more about Spirit Assembly, our team is ready to connect.', 'sac' ) );
 	$form_title    = (string) sac_field( 'sac_contact_form_title', __( 'Send us a message', 'sac' ) );
@@ -23,10 +23,10 @@ while ( have_posts() ) :
 	$instagram_feed = trim( (string) sac_field( 'sac_instagram_feed_shortcode', '' ) );
 	$facebook_feed  = trim( (string) sac_field( 'sac_facebook_feed_shortcode', '' ) );
 	$socials       = array(
-		'Facebook'  => (string) sac_field( 'sac_social_facebook', 'https://bit.ly/3ek5Edk' ),
-		'Instagram' => (string) sac_field( 'sac_social_instagram', 'https://bit.ly/2U32Daz' ),
-		'YouTube'   => (string) sac_field( 'sac_social_youtube', 'https://bit.ly/3wEWzlL' ),
-		'TikTok'    => (string) sac_field( 'sac_social_tiktok', 'https://bit.ly/42Taw2M' ),
+		'Facebook'  => (string) sac_contact_info( 'SOCIAL_FACEBOOK', 'sac_social_facebook', 'https://bit.ly/3ek5Edk' ),
+		'Instagram' => (string) sac_contact_info( 'SOCIAL_INSTAGRAM', 'sac_social_instagram', 'https://bit.ly/2U32Daz' ),
+		'YouTube'   => (string) sac_contact_info( 'SOCIAL_YOUTUBE', 'sac_social_youtube', 'https://bit.ly/3wEWzlL' ),
+		'TikTok'    => (string) sac_contact_info( 'SOCIAL_TIKTOK', 'sac_social_tiktok', 'https://bit.ly/42Taw2M' ),
 	);
 	$status = sanitize_key( wp_unslash( $_GET['contact-status'] ?? '' ) );
 	$notices = array(
@@ -100,8 +100,8 @@ while ( have_posts() ) :
 
 				<?php if ( $instagram_feed || $facebook_feed ) : ?>
 					<div class="sac-social-feed-grid">
-						<?php if ( $instagram_feed ) : ?><div class="sac-social-feed-panel"><?php echo do_shortcode( $instagram_feed ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div><?php endif; ?>
-						<?php if ( $facebook_feed ) : ?><div class="sac-social-feed-panel"><?php echo do_shortcode( $facebook_feed ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div><?php endif; ?>
+						<?php if ( $instagram_feed ) : ?><div class="sac-social-feed-panel"><?php echo wp_kses_post( do_shortcode( $instagram_feed ) ); ?></div><?php endif; ?>
+						<?php if ( $facebook_feed ) : ?><div class="sac-social-feed-panel"><?php echo wp_kses_post( do_shortcode( $facebook_feed ) ); ?></div><?php endif; ?>
 					</div>
 				<?php else : ?>
 					<div class="sac-social-placeholder-grid">

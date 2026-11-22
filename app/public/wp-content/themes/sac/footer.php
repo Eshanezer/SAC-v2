@@ -10,12 +10,12 @@ $service_time  = (string) sac_field( 'sac_service_time', '', $front_page_id );
 $location_name = (string) sac_field( 'sac_location_name', __( 'Riga, Latvia', 'sac' ), $front_page_id );
 $address       = (string) sac_field( 'sac_location_address', '', $front_page_id );
 $contact_id    = sac_page_id( 'contact' );
-$phone         = (string) sac_field( 'sac_contact_phone', '+371 22089000', $contact_id );
+$phone         = (string) sac_contact_info( 'CONTACT_PHONE', 'sac_contact_phone', '+371 22089000', $contact_id );
 $socials       = array(
-	'Facebook'  => (string) sac_field( 'sac_social_facebook', 'https://bit.ly/3ek5Edk', $contact_id ),
-	'Instagram' => (string) sac_field( 'sac_social_instagram', 'https://bit.ly/2U32Daz', $contact_id ),
-	'YouTube'   => (string) sac_field( 'sac_social_youtube', 'https://bit.ly/3wEWzlL', $contact_id ),
-	'TikTok'    => (string) sac_field( 'sac_social_tiktok', 'https://bit.ly/42Taw2M', $contact_id ),
+	'Facebook'  => (string) sac_contact_info( 'SOCIAL_FACEBOOK', 'sac_social_facebook', 'https://bit.ly/3ek5Edk', $contact_id ),
+	'Instagram' => (string) sac_contact_info( 'SOCIAL_INSTAGRAM', 'sac_social_instagram', 'https://bit.ly/2U32Daz', $contact_id ),
+	'YouTube'   => (string) sac_contact_info( 'SOCIAL_YOUTUBE', 'sac_social_youtube', 'https://bit.ly/3wEWzlL', $contact_id ),
+	'TikTok'    => (string) sac_contact_info( 'SOCIAL_TIKTOK', 'sac_social_tiktok', 'https://bit.ly/42Taw2M', $contact_id ),
 );
 ?>
 <footer class="site-footer bg-dark text-white pt-5">
