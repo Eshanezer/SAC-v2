@@ -14,7 +14,7 @@ while ( have_posts() ) :
 	$eyebrow       = (string) sac_field( 'sac_page_eyebrow', __( 'Connect with us', 'sac' ) );
 	$intro         = (string) sac_field( 'sac_page_intro', __( 'We would love to hear from you, pray with you, and help you take your next step.', 'sac' ) );
 	$phone         = (string) sac_field( 'sac_contact_phone', '+371 22089000' );
-	$email         = (string) sac_field( 'sac_contact_email', (string) get_option( 'admin_email' ) );
+	$email         = (string) sac_field( 'sac_contact_email', 'info@spiritassemblychurch.com' );
 	$contact_title = (string) sac_field( 'sac_contact_title', __( 'Let’s start a conversation.', 'sac' ) );
 	$contact_text  = (string) sac_field( 'sac_contact_text', __( 'Whether you have a question, need prayer, or want to know more about Spirit Assembly, our team is ready to connect.', 'sac' ) );
 	$form_title    = (string) sac_field( 'sac_contact_form_title', __( 'Send us a message', 'sac' ) );

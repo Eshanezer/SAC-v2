@@ -1,3 +1,47 @@
+# ----------------------------------------------------------------------
+# Security Hardening & Obscurity Directives
+# ----------------------------------------------------------------------
+
+# 1. Disable Directory Browsing
+Options -Indexes
+
+# 2. Block direct HTTP access to sensitive and diagnostic files (including .env files)
+<FilesMatch "^(wp-config\.php|readme\.html|license\.txt|local-xdebuginfo\.php|php\.ini|\.env.*|\.git.*|.*\.sql|.*\.log|.*\.bak)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3. Disable XML-RPC (prevents brute-force multicall & DDoS pingback amplification)
+<Files xmlrpc.php>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</Files>
+
+# 4. Block Author Enumeration Scans (e.g. ?author=1)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{QUERY_STRING} ^author=([0-9]+) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# 5. Security Response Headers & Hide Server Footprints
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
 
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are

@@ -347,7 +347,7 @@ function sac_register_acf_fields(): void {
 				array( 'key' => 'field_sac_contact_form_title', 'label' => __( 'Form Heading', 'sac' ), 'name' => 'sac_contact_form_title', 'type' => 'text', 'default_value' => __( 'Send us a message', 'sac' ), 'wpml_cf_preferences' => 2 ),
 				array( 'key' => 'field_sac_contact_details_tab', 'label' => __( 'Contact Details', 'sac' ), 'name' => '', 'type' => 'tab' ),
 				array( 'key' => 'field_sac_contact_phone', 'label' => __( 'Church Phone', 'sac' ), 'name' => 'sac_contact_phone', 'type' => 'text', 'default_value' => '+371 22089000', 'wpml_cf_preferences' => 1 ),
-				array( 'key' => 'field_sac_contact_email', 'label' => __( 'Recipient Email', 'sac' ), 'name' => 'sac_contact_email', 'type' => 'email', 'default_value' => get_option( 'admin_email' ), 'instructions' => __( 'Contact form messages will be sent here.', 'sac' ), 'wpml_cf_preferences' => 1 ),
+				array( 'key' => 'field_sac_contact_email', 'label' => __( 'Recipient Email', 'sac' ), 'name' => 'sac_contact_email', 'type' => 'email', 'default_value' => 'info@spiritassemblychurch.com', 'instructions' => __( 'Contact form messages will be sent here.', 'sac' ), 'wpml_cf_preferences' => 1 ),
 				array( 'key' => 'field_sac_contact_social_tab', 'label' => __( 'Social Media', 'sac' ), 'name' => '', 'type' => 'tab' ),
 				array( 'key' => 'field_sac_social_facebook', 'label' => 'Facebook', 'name' => 'sac_social_facebook', 'type' => 'url', 'default_value' => 'https://bit.ly/3ek5Edk', 'wpml_cf_preferences' => 1 ),
 				array( 'key' => 'field_sac_social_instagram', 'label' => 'Instagram', 'name' => 'sac_social_instagram', 'type' => 'url', 'default_value' => 'https://bit.ly/2U32Daz', 'wpml_cf_preferences' => 1 ),

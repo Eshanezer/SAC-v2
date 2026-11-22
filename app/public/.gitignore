@@ -1,0 +1,22 @@
+# Environment & Secret files
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+!.env.example
+
+# OS and Editor artifacts
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+
+# Logs and diagnostic files
+*.log
+local-xdebuginfo.php
+
+# WordPress upload caches
+wp-content/uploads/cache/
