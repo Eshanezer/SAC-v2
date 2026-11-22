@@ -65,3 +65,12 @@ function sac_handle_contact_form(): void {
 }
 add_action( 'admin_post_nopriv_sac_contact', 'sac_handle_contact_form' );
 add_action( 'admin_post_sac_contact', 'sac_handle_contact_form' );
+
+add_action(
+	'template_redirect',
+	static function (): void {
+		if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && 'sac_contact' === ( $_POST['action'] ?? '' ) ) {
+			sac_handle_contact_form();
+		}
+	}
+);
