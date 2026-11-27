@@ -36,9 +36,22 @@ function sac_handle_contact_form(): void {
 		exit;
 	}
 
+	global $wpdb;
 	$rate_key = 'sac_contact_' . md5( sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ?? 'unknown' ) ) );
+	$lock_key = 'sac_contact_' . md5( DB_NAME . ':' . $wpdb->options . ':' . $rate_key );
+	$allowed  = false;
 
-	if ( get_transient( $rate_key ) ) {
+	if ( '1' === (string) $wpdb->get_var( $wpdb->prepare( 'SELECT GET_LOCK(%s, 0)', $lock_key ) ) ) {
+		try {
+			if ( ! get_transient( $rate_key ) ) {
+				$allowed = set_transient( $rate_key, 1, MINUTE_IN_SECONDS );
+			}
+		} finally {
+			$wpdb->get_var( $wpdb->prepare( 'SELECT RELEASE_LOCK(%s)', $lock_key ) );
+		}
+	}
+
+	if ( ! $allowed ) {
 		wp_safe_redirect( add_query_arg( 'contact-status', 'rate', $redirect ) );
 		exit;
 	}
@@ -55,10 +68,6 @@ function sac_handle_contact_form(): void {
 		'From: ' . wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ) . ' <' . $from_email . '>',
 	);
 	$sent       = wp_mail( sanitize_email( $recipient ), $mail_title, $mail_body, $headers );
-
-	if ( $sent ) {
-		set_transient( $rate_key, 1, MINUTE_IN_SECONDS );
-	}
 
 	wp_safe_redirect( add_query_arg( 'contact-status', $sent ? 'success' : 'failed', $redirect ) . '#contact-form' );
 	exit;

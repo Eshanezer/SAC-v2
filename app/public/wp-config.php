@@ -106,14 +106,26 @@ if ( $wp_env_type && file_exists( __DIR__ . '/.env.' . $wp_env_type ) ) {
 } elseif ( file_exists( __DIR__ . '/.env.production' ) ) {
 	// Production server fallback
 	sac_load_env( __DIR__ . '/.env.production' );
+	$wp_env_type = 'production';
 }
 
 // ---------------------------------------------------------------------
 // 3. Database Settings
 // ---------------------------------------------------------------------
-define( 'DB_NAME',     env( 'DB_NAME', 'local' ) );
-define( 'DB_USER',     env( 'DB_USER', 'root' ) );
-define( 'DB_PASSWORD', env( 'DB_PASSWORD', 'root' ) );
+$environment = env( 'WP_ENVIRONMENT_TYPE', $wp_env_type ?: 'local' );
+$is_local = in_array( $environment, array( 'local', 'development' ), true );
+$db_name = env( 'DB_NAME', $is_local ? 'local' : null );
+$db_user = env( 'DB_USER', $is_local ? 'root' : null );
+$db_password = env( 'DB_PASSWORD', $is_local ? 'root' : null );
+
+if ( ! $is_local && ( ! $db_name || ! $db_user || ! $db_password || 'root' === strtolower( (string) $db_user ) ) ) {
+	http_response_code( 503 );
+	exit( 'Database configuration is incomplete.' );
+}
+
+define( 'DB_NAME',     $db_name );
+define( 'DB_USER',     $db_user );
+define( 'DB_PASSWORD', $db_password );
 define( 'DB_HOST',     env( 'DB_HOST', 'localhost' ) );
 define( 'DB_CHARSET',  env( 'DB_CHARSET', 'utf8' ) );
 define( 'DB_COLLATE',  env( 'DB_COLLATE', '' ) );
@@ -121,15 +133,14 @@ define( 'DB_COLLATE',  env( 'DB_COLLATE', '' ) );
 // ---------------------------------------------------------------------
 // 4. Authentication Unique Keys and Salts
 // ---------------------------------------------------------------------
-define( 'AUTH_KEY',          env( 'AUTH_KEY', 'G,J_Y`ze(}8qNie@ab_#uPn*815lSTo`6YY5kZ<ok5-b.1_xFt7})5qF(%g0L&Pt' ) );
-define( 'SECURE_AUTH_KEY',   env( 'SECURE_AUTH_KEY', 'R{4S}eQ*etu<x:jFp{qhY/|jr`CVA<D>-*/L1 xSKaYn2tCB9+5.6q[eB13m`:xb' ) );
-define( 'LOGGED_IN_KEY',     env( 'LOGGED_IN_KEY', 'km7W:v9&I[kOnG9X|XiHR.,U.bLG{hxEly35kMX=bM>:AZ9YuMELJCwJ_QQv,7{)' ) );
-define( 'NONCE_KEY',         env( 'NONCE_KEY', 'oZWob.RG+d2]+jnb(/T/VK^}|(r&2b`PG1jQWF$SMT(}g6;cj{^{keG#n>^5)36O' ) );
-define( 'AUTH_SALT',         env( 'AUTH_SALT', 'iD[@fd{iyX{*4+Fg4>(bdJwvF?tMQ~PnF`)UgEaQ*`oU`$+Oj*%7eSKHc1q@PN;X' ) );
-define( 'SECURE_AUTH_SALT',  env( 'SECURE_AUTH_SALT', '+:$|dGsem3go~+(3j>B % j/>T<oT%q1A)bBc*8&#=/=li9,?F8m2T}@UpeM c:r' ) );
-define( 'LOGGED_IN_SALT',    env( 'LOGGED_IN_SALT', 'xdt8pm0~Ha$$@x|y<Il/]/^SN2_jc_}oO/xR?5gl12tnqxF]~9bx!)o~<a)_bd@4' ) );
-define( 'NONCE_SALT',        env( 'NONCE_SALT', 'K1!M>DqU5H{4asrr/%BfRcEHrC9:iQTR?zP7HQMNK5f,*^w}qAvFzd+UeKx[yM!K' ) );
-define( 'WP_CACHE_KEY_SALT', env( 'WP_CACHE_KEY_SALT', 'hS;{E5Xk.et_MYWtyso43]6%C;bE-%N6|fbKd:z7T]u;8,qk>Xz(};l5{1exjE?W' ) );
+
+// WordPress generates per-installation salts when the keys are omitted.
+foreach ( array( 'AUTH_KEY', 'SECURE_AUTH_KEY', 'LOGGED_IN_KEY', 'NONCE_KEY', 'AUTH_SALT', 'SECURE_AUTH_SALT', 'LOGGED_IN_SALT', 'NONCE_SALT', 'WP_CACHE_KEY_SALT' ) as $key ) {
+	$value = env( $key );
+	if ( is_string( $value ) && '' !== trim( $value ) ) {
+		define( $key, $value );
+	}
+}
 
 // ---------------------------------------------------------------------
 // 5. Database Table Prefix
@@ -139,7 +150,7 @@ $table_prefix = env( 'DB_TABLE_PREFIX', 'wp_' );
 // ---------------------------------------------------------------------
 // 6. Debugging & Environment Settings
 // ---------------------------------------------------------------------
-define( 'WP_ENVIRONMENT_TYPE', env( 'WP_ENVIRONMENT_TYPE', 'local' ) );
+define( 'WP_ENVIRONMENT_TYPE', $environment );
 
 if ( ! defined( 'WP_DEBUG' ) ) {
 	define( 'WP_DEBUG', (bool) env( 'WP_DEBUG', false ) );
