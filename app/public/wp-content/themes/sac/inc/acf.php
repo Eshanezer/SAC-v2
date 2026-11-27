@@ -21,6 +21,81 @@ function sac_register_acf_fields(): void {
 		return;
 	}
 
+	acf_add_local_field_group(
+		array(
+			'key'      => 'group_sac_ministry_photos',
+			'title'    => __( 'Ministry Photos', 'sac' ),
+			'fields'   => array(
+				array(
+					'key'                 => 'field_sac_ministry_gallery',
+					'name'                => 'sac_ministry_gallery',
+					'label'               => __( 'Photo Gallery', 'sac' ),
+					'type'                => 'gallery',
+					'return_format'       => 'id',
+					'preview_size'        => 'medium',
+					'instructions'        => __( 'Add photos from the ministry and drag them into display order.', 'sac' ),
+					'wpml_cf_preferences' => 1,
+				),
+			),
+			'location' => array(
+				array( array( 'param' => 'post_type', 'operator' => '==', 'value' => 'sac_ministry' ) ),
+			),
+		)
+	);
+
+	acf_add_local_field_group(
+		array(
+			'key'      => 'group_sac_album_photos',
+			'title'    => __( 'Album Photos', 'sac' ),
+			'fields'   => array(
+				array(
+					'key'                 => 'field_sac_album_photos',
+					'name'                => 'sac_album_photos',
+					'label'               => __( 'Photos', 'sac' ),
+					'type'                => 'gallery',
+					'return_format'       => 'id',
+					'preview_size'        => 'medium',
+					'instructions'        => __( 'Add photos, edit their captions, and drag them into order. Set a Featured Image to choose a different album cover.', 'sac' ),
+					'wpml_cf_preferences' => 1,
+				),
+			),
+			'location' => array(
+				array( array( 'param' => 'post_type', 'operator' => '==', 'value' => 'sac_album' ) ),
+			),
+		)
+	);
+
+	acf_add_local_field_group(
+		array(
+			'key'      => 'group_sac_video_details',
+			'title'    => __( 'Video Details', 'sac' ),
+			'fields'   => array(
+				array(
+					'key'                 => 'field_sac_video_youtube_url',
+					'name'                => 'sac_video_youtube_url',
+					'label'               => __( 'YouTube URL', 'sac' ),
+					'type'                => 'url',
+					'required'            => 1,
+					'instructions'        => __( 'Paste a link to a single YouTube video, Short, or livestream.', 'sac' ),
+					'wpml_cf_preferences' => 1,
+				),
+				array(
+					'key'                 => 'field_sac_video_thumbnail',
+					'name'                => 'sac_video_thumbnail',
+					'label'               => __( 'Video Thumbnail', 'sac' ),
+					'type'                => 'image',
+					'return_format'       => 'id',
+					'preview_size'        => 'medium',
+					'instructions'        => __( 'Optional. The video uses its YouTube thumbnail if no cover is selected.', 'sac' ),
+					'wpml_cf_preferences' => 1,
+				),
+			),
+			'location' => array(
+				array( array( 'param' => 'post_type', 'operator' => '==', 'value' => 'sac_video' ) ),
+			),
+		)
+	);
+
 	$give_page_locations = array(
 		array(
 			array( 'param' => 'page_template', 'operator' => '==', 'value' => 'page-give.php' ),
@@ -330,6 +405,9 @@ function sac_register_acf_fields(): void {
 						'value'    => 'front_page',
 					),
 				),
+				array(
+					array( 'param' => 'post_type', 'operator' => '==', 'value' => 'sac_ministry' ),
+				),
 			),
 			'position' => 'normal',
 			'style'    => 'default',
@@ -451,6 +529,14 @@ function sac_register_acf_fields(): void {
 			'key'    => 'group_sac_event_details',
 			'title'  => __( 'Event Details', 'sac' ),
 			'fields' => array(
+				array( 'key' => 'field_sac_event_content_tab', 'label' => __( 'Content', 'sac' ), 'type' => 'tab' ),
+				array( 'key' => 'field_sac_event_heading', 'label' => __( 'Display Heading', 'sac' ), 'name' => 'sac_event_heading', 'type' => 'text', 'instructions' => __( 'Optional. Leave blank to use the event title on cards and the event page.', 'sac' ), 'wpml_cf_preferences' => 2 ),
+				array( 'key' => 'field_sac_event_summary', 'label' => __( 'Short Summary', 'sac' ), 'name' => 'sac_event_summary', 'type' => 'textarea', 'rows' => 3, 'instructions' => __( 'Shown on the event card and near the top of the event page.', 'sac' ), 'wpml_cf_preferences' => 2 ),
+				array( 'key' => 'field_sac_event_information', 'label' => __( 'Event Information', 'sac' ), 'name' => 'sac_event_information', 'type' => 'wysiwyg', 'toolbar' => 'basic', 'media_upload' => 0, 'wpml_cf_preferences' => 2 ),
+				array( 'key' => 'field_sac_event_media_tab', 'label' => __( 'Images', 'sac' ), 'type' => 'tab' ),
+				array( 'key' => 'field_sac_event_cover', 'label' => __( 'Cover Photo', 'sac' ), 'name' => 'sac_event_cover', 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'medium', 'instructions' => __( 'Used on the event card and as the event page banner.', 'sac' ), 'wpml_cf_preferences' => 1 ),
+				array( 'key' => 'field_sac_event_gallery', 'label' => __( 'Event Photo Gallery', 'sac' ), 'name' => 'sac_event_gallery', 'type' => 'gallery', 'return_format' => 'id', 'preview_size' => 'medium', 'instructions' => __( 'Select photos and drag them into the order you want on the event page.', 'sac' ), 'wpml_cf_preferences' => 1 ),
+				array( 'key' => 'field_sac_event_schedule_tab', 'label' => __( 'Schedule and Venue', 'sac' ), 'type' => 'tab' ),
 				array(
 					'key'                 => 'field_sac_event_start',
 					'label'               => __( 'Starts', 'sac' ),
@@ -562,6 +648,19 @@ function sac_register_acf_fields(): void {
 	);
 }
 add_action( 'acf/init', 'sac_register_acf_fields' );
+
+add_filter(
+	'acf/validate_value/key=field_sac_video_youtube_url',
+	static function ( $valid, $value ) {
+		if ( true === $valid && $value && ( ! is_string( $value ) || '' === sac_youtube_video_id( $value ) ) ) {
+			return __( 'Enter a link to a single YouTube video.', 'sac' );
+		}
+
+		return $valid;
+	},
+	10,
+	2
+);
 
 /**
  * Explain the optional dependency when this theme moves to another environment.

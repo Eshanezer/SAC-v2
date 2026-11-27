@@ -154,6 +154,24 @@ function sac_add_settings_page(): void {
 }
 add_action( 'admin_menu', 'sac_add_settings_page' );
 
+add_action(
+	'admin_menu',
+	static function (): void {
+		remove_menu_page( 'edit-comments.php' );
+	},
+	99
+);
+
+add_action(
+	'admin_bar_menu',
+	static function ( WP_Admin_Bar $admin_bar ): void {
+		if ( is_admin() ) {
+			$admin_bar->remove_node( 'comments' );
+		}
+	},
+	99
+);
+
 /**
  * Render the SAC Settings screen.
  */

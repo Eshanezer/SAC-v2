@@ -103,7 +103,7 @@ $messages_query = new WP_Query(
 	)
 );
 ?>
-<main id="primary" class="site-main">
+<main id="primary" tabindex="-1" class="site-main">
 	<section class="sac-hero d-flex align-items-center text-white" style="<?php echo esc_attr( $hero_style ); ?>">
 		<div class="container position-relative py-5">
 			<div class="row min-vh-75 align-items-center py-5">

@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-<main id="primary" class="site-main">
+<main id="primary" tabindex="-1" class="site-main">
 	<?php while ( have_posts() ) : ?>
 		<?php
 		the_post();

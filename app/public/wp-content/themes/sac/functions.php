@@ -15,8 +15,11 @@ define( 'SAC_BOOTSTRAP_VERSION', '5.3.8' );
 $sac_includes = array(
 	'/inc/setup.php',
 	'/inc/settings.php',
+	'/inc/seasonal.php',
 	'/inc/helpers.php',
+	'/inc/broadcast.php',
 	'/inc/navigation.php',
+	'/inc/breadcrumbs.php',
 	'/inc/contact.php',
 	'/inc/post-types.php',
 	'/inc/acf.php',

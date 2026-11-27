@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-<main id="primary" class="site-main">
+<main id="primary" tabindex="-1" class="site-main">
 	<?php get_template_part( 'template-parts/page-hero', null, array( 'eyebrow' => __( 'Grow in Faith', 'sac' ), 'title' => __( 'Messages', 'sac' ), 'intro' => __( 'Watch teaching and encouragement from Spirit Assembly Church.', 'sac' ) ) ); ?>
 
 	<div class="container py-5">
@@ -15,7 +15,7 @@ get_header();
 			<div class="row g-4 py-lg-5">
 				<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
-					<div class="col-md-6 col-xl-4"><?php get_template_part( 'template-parts/card', 'sermon' ); ?></div>
+					<div class="col-md-6 col-xl-4"><?php get_template_part( 'template-parts/card', 'sermon', array( 'heading_level' => 2 ) ); ?></div>
 				<?php endwhile; ?>
 			</div>
 			<div class="pb-5"><?php the_posts_pagination(); ?></div>

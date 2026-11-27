@@ -601,3 +601,148 @@ msgstr ""
 msgctxt "Font family name"
 msgid "Editorial Serif"
 msgstr ""
+
+msgid "Videos"
+msgstr ""
+
+msgid "Video"
+msgstr ""
+
+msgid "Add New Video"
+msgstr ""
+
+msgid "Edit Video"
+msgstr ""
+
+msgid "View Video"
+msgstr ""
+
+msgid "Search Videos"
+msgstr ""
+
+msgid "Video Details"
+msgstr ""
+
+msgid "YouTube URL"
+msgstr ""
+
+msgid "Paste a link to a single YouTube video, Short, or livestream."
+msgstr ""
+
+msgid "Video Thumbnail"
+msgstr ""
+
+msgid "Optional. The video uses its YouTube thumbnail if no cover is selected."
+msgstr ""
+
+msgid "Enter a link to a single YouTube video."
+msgstr ""
+
+msgid "Watch recordings from Spirit Assembly Church."
+msgstr ""
+
+msgid "No videos are published yet."
+msgstr ""
+
+msgid "Back to Videos"
+msgstr ""
+
+#, php-format
+msgid "YouTube video: %s"
+msgstr ""
+
+msgid "Watch on YouTube"
+msgstr ""
+
+msgid "This video is currently unavailable."
+msgstr ""
+
+msgid "Broadcast"
+msgstr ""
+
+msgid "Live Broadcast"
+msgstr ""
+
+msgid "Live status"
+msgstr ""
+
+msgid "Enable broadcast and show the live banner"
+msgstr ""
+
+msgid "Turn this on when your service starts and off when it ends."
+msgstr ""
+
+msgid "Broadcast URL"
+msgstr ""
+
+msgid "Paste the share link for the specific YouTube broadcast, or a direct HTTPS .m3u8, .mp4, or .webm URL."
+msgstr ""
+
+msgid "Enter a YouTube video or livestream link, or an HTTPS .m3u8, .mp4, or .webm URL."
+msgstr ""
+
+msgid "View Broadcast page"
+msgstr ""
+
+msgid "Service is live"
+msgstr ""
+
+msgid "Watch live"
+msgstr ""
+
+msgid "Live broadcast player"
+msgstr ""
+
+msgid "The stream could not be played here. Try opening the stream directly."
+msgstr ""
+
+msgid "Open stream directly"
+msgstr ""
+
+msgid "No broadcast is live right now."
+msgstr ""
+
+msgid "Watch past recordings"
+msgstr ""
+
+msgid "Broadcast title"
+msgstr ""
+
+msgid "Optional. Shown on the live banner and Broadcast page."
+msgstr ""
+
+msgid "Start date and time"
+msgstr ""
+
+#, php-format
+msgid "Optional. Uses the site time zone (%s). The live switch still controls when the broadcast appears."
+msgstr ""
+
+msgid "Enter a valid broadcast start date and time."
+msgstr ""
+
+msgid "Breadcrumb"
+msgstr ""
+
+msgid "Gallery"
+msgstr ""
+
+msgid "Search results"
+msgstr ""
+
+#, php-format
+msgid "Search results for “%s”"
+msgstr ""
+
+msgid "Posts"
+msgstr ""
+
+msgid "Untitled"
+msgstr ""
+
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+msgid "Hide snowfall"
+msgstr ""

@@ -18,6 +18,11 @@ location ~ /\. {
 	return 404;
 }
 
+# Keep runtime diagnostics and backup files out of the public site.
+location ~* \.(?:ini|log|sql|bak)$ {
+	return 404;
+}
+
 # Deny access to any files with a .php extension in the uploads directory
 # Works in sub-directory installs and also in multisite network
 # Keep logging the requests to parse later (or to pass to firewall utilities such as fail2ban)

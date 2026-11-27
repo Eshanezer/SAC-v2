@@ -8,6 +8,8 @@
 $front_page_id = sac_front_page_id();
 $service_time  = (string) sac_field( 'sac_service_time', '', $front_page_id );
 $premium_menu = sac_premium_menu_enabled();
+$brand_name   = __( 'Spirit Assembly', 'sac' );
+$brand_place  = __( 'Church Riga', 'sac' );
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -17,7 +19,7 @@ $premium_menu = sac_premium_menu_enabled();
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="visually-hidden-focusable position-fixed top-0 start-0 z-3 m-3 btn btn-light" href="#primary">
+<a class="sac-skip-link visually-hidden-focusable position-fixed top-0 start-0 m-3 btn btn-light" href="#primary">
 	<?php esc_html_e( 'Skip to content', 'sac' ); ?>
 </a>
 
@@ -36,15 +38,15 @@ $premium_menu = sac_premium_menu_enabled();
 
 	<nav class="navbar <?php echo $premium_menu ? 'sac-navbar-premium' : 'navbar-expand-xl sac-navbar-classic'; ?> navbar-dark bg-dark py-3" aria-label="<?php esc_attr_e( 'Primary navigation', 'sac' ); ?>">
 		<div class="container">
-			<a class="navbar-brand d-flex align-items-center gap-3 me-4" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+			<a class="navbar-brand d-flex align-items-center gap-3 me-4" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php echo esc_attr( $brand_name . ' ' . $brand_place ); ?>">
 				<?php echo sac_brand_logo( 'navbar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				<span class="sac-brand-name">
-					<strong class="d-block lh-1"><?php esc_html_e( 'Spirit Assembly', 'sac' ); ?></strong>
-					<small class="d-block text-primary text-uppercase mt-1"><?php esc_html_e( 'Church Riga', 'sac' ); ?></small>
+					<strong class="d-block lh-1"><?php echo esc_html( $brand_name ); ?></strong>
+					<small class="d-block text-primary text-uppercase mt-1"><?php echo esc_html( $brand_place ); ?></small>
 				</span>
 			</a>
 
-			<button class="navbar-toggler sac-menu-toggle border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#sacPrimaryMenu" aria-controls="sacPrimaryMenu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'sac' ); ?>">
+			<button class="navbar-toggler sac-menu-toggle border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#sacPrimaryMenu" aria-controls="sacPrimaryMenu" aria-expanded="false">
 				<span class="sac-menu-toggle-label"><?php esc_html_e( 'Menu', 'sac' ); ?></span>
 				<span class="sac-menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
 			</button>
@@ -100,4 +102,11 @@ $premium_menu = sac_premium_menu_enabled();
 			</div>
 		</div>
 	</nav>
+	<?php if ( sac_christmas_snow_enabled() ) : ?>
+		<button type="button" class="sac-snow-control" aria-label="<?php esc_attr_e( 'Hide snowfall', 'sac' ); ?>" aria-controls="sac-christmas-snow" aria-pressed="false" hidden>
+			<span class="sac-snow-control-icon" aria-hidden="true">&#10052;&#65038;</span>
+		</button>
+	<?php endif; ?>
 </header>
+<?php get_template_part( 'template-parts/broadcast-banner' ); ?>
+<?php get_template_part( 'template-parts/breadcrumbs' ); ?>

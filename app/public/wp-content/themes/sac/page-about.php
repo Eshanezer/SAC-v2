@@ -41,7 +41,7 @@ while ( have_posts() ) :
 		array( 'url' => get_theme_file_uri( '/assets/img/placeholders/prayer-care.jpg' ), 'alt' => __( 'Two church members sharing a moment of prayer', 'sac' ) ),
 	);
 	?>
-	<main id="primary" class="site-main sac-about-page">
+	<main id="primary" tabindex="-1" class="site-main sac-about-page">
 		<?php get_template_part( 'template-parts/page-hero', null, array( 'eyebrow' => $eyebrow, 'title' => get_the_title(), 'intro' => $intro, 'image' => $image ) ); ?>
 
 		<?php if ( trim( (string) get_the_content() ) ) : ?>
