@@ -38,7 +38,7 @@ while ( have_posts() ) :
 	);
 
 	?>
-	<main id="primary" class="site-main sac-contact-page">
+	<main id="primary" tabindex="-1" class="site-main sac-contact-page">
 	<?php
 	get_template_part(
 		'template-parts/page-hero',

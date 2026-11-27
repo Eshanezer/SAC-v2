@@ -46,7 +46,7 @@ while ( have_posts() ) :
 	$closing_title    = (string) sac_field( 'sac_give_closing_title', __( 'Thank you for your generosity.', 'sac' ) );
 	$closing_text     = (string) sac_field( 'sac_give_closing_text', __( 'Every gift helps us continue the work God has entrusted to Spirit Assembly.', 'sac' ) );
 	?>
-	<main id="primary" class="site-main sac-give-page">
+	<main id="primary" tabindex="-1" class="site-main sac-give-page">
 		<header class="sac-give-hero">
 			<div class="container py-5">
 				<div class="row justify-content-center py-lg-5 text-center">

@@ -156,10 +156,12 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 	define( 'WP_DEBUG', (bool) env( 'WP_DEBUG', false ) );
 }
 if ( ! defined( 'WP_DEBUG_LOG' ) ) {
-	define( 'WP_DEBUG_LOG', (bool) env( 'WP_DEBUG_LOG', false ) );
+	$sac_log_directory = dirname( __DIR__, 2 ) . '/logs/php';
+	$sac_debug_log     = is_dir( $sac_log_directory ) ? $sac_log_directory . '/wp-debug.log' : dirname( __DIR__ ) . '/wp-debug.log';
+	define( 'WP_DEBUG_LOG', env( 'WP_DEBUG_LOG', false ) ? $sac_debug_log : false );
 }
 if ( ! defined( 'WP_DEBUG_DISPLAY' ) ) {
-	define( 'WP_DEBUG_DISPLAY', (bool) env( 'WP_DEBUG_DISPLAY', false ) );
+	define( 'WP_DEBUG_DISPLAY', $is_local && (bool) env( 'WP_DEBUG_DISPLAY', false ) );
 }
 if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) {
 	define( 'DISALLOW_FILE_EDIT', (bool) env( 'DISALLOW_FILE_EDIT', true ) );

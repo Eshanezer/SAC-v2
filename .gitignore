@@ -1,0 +1,8 @@
+# Local database exports and runtime diagnostics
+/app/sql/
+/logs/
+*.log
+
+# Local PHP configuration belongs outside the public directory.
+/app/php.ini
+/app/public/php.ini

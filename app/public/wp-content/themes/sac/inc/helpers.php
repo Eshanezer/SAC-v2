@@ -244,6 +244,49 @@ function sac_image_url( string $name, string $size = 'full', int $post_id = 0 ):
 }
 
 /**
+ * Return saved album photo IDs in editor order.
+ */
+function sac_album_photo_ids( int $post_id ): array {
+	$saved_ids = (array) get_post_meta( $post_id, 'sac_album_photos', true );
+	return array_values( array_unique( array_filter( array_map( 'absint', $saved_ids ) ) ) );
+}
+
+/**
+ * Extract an ID from a YouTube watch, share, Short, livestream, or embed URL.
+ */
+function sac_youtube_video_id( string $url ): string {
+	$parts = wp_parse_url( trim( $url ) );
+	if ( ! is_array( $parts ) || ! in_array( strtolower( $parts['scheme'] ?? '' ), array( 'https', 'http' ), true ) || isset( $parts['user'] ) || isset( $parts['pass'] ) || isset( $parts['port'] ) ) {
+		return '';
+	}
+
+	$host = strtolower( $parts['host'] ?? '' );
+	$path = rtrim( $parts['path'] ?? '', '/' );
+	$id   = '';
+
+	if ( 'youtu.be' === $host ) {
+		$id = substr( $path, 1 );
+	} elseif ( in_array( $host, array( 'youtube.com', 'www.youtube.com', 'm.youtube.com', 'music.youtube.com', 'youtube-nocookie.com', 'www.youtube-nocookie.com' ), true ) ) {
+		if ( '/watch' === $path ) {
+			parse_str( $parts['query'] ?? '', $query );
+			$id = $query['v'] ?? '';
+		} elseif ( preg_match( '~^/(?:shorts|live|embed)/([^/]+)$~D', $path, $matches ) ) {
+			$id = $matches[1];
+		}
+	}
+
+	return is_string( $id ) && preg_match( '/^[A-Za-z0-9_-]{11}$/D', $id ) ? $id : '';
+}
+
+/**
+ * Read a video ID from its saved URL, even when the editor plugin is inactive.
+ */
+function sac_saved_video_id( int $post_id ): string {
+	$url = get_post_meta( $post_id, 'sac_video_youtube_url', true );
+	return is_string( $url ) ? sac_youtube_video_id( $url ) : '';
+}
+
+/**
  * Format an ACF date-time value in the site's timezone.
  */
 function sac_format_datetime( string $value, string $format = 'j M Y · H:i' ): string {

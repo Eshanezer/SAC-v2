@@ -55,6 +55,11 @@ $socials       = array(
 				<ul class="list-unstyled mb-0">
 					<li class="mb-2"><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( sac_page_url( 'new-here' ) ); ?>"><?php esc_html_e( 'Plan a Visit', 'sac' ); ?></a></li>
 					<li class="mb-2"><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( (string) get_post_type_archive_link( 'sac_sermon' ) ); ?>"><?php esc_html_e( 'Watch Messages', 'sac' ); ?></a></li>
+					<li class="mb-2"><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( (string) get_post_type_archive_link( 'sac_album' ) ); ?>"><?php esc_html_e( 'Gallery', 'sac' ); ?></a></li>
+					<li class="mb-2"><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( (string) get_post_type_archive_link( 'sac_video' ) ); ?>"><?php esc_html_e( 'Videos', 'sac' ); ?></a></li>
+					<?php if ( $broadcast_url = sac_broadcast_page_url() ) : ?>
+						<li class="mb-2"><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( $broadcast_url ); ?>"><?php esc_html_e( 'Live Broadcast', 'sac' ); ?></a></li>
+					<?php endif; ?>
 					<li class="mb-2"><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( sac_page_url( 'contact' ) ); ?>"><?php esc_html_e( 'Contact Us', 'sac' ); ?></a></li>
 					<li><a class="link-light link-opacity-75-hover text-decoration-none" href="<?php echo esc_url( sac_page_url( 'donate' ) ); ?>"><?php esc_html_e( 'Donate', 'sac' ); ?></a></li>
 				</ul>

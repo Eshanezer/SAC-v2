@@ -48,7 +48,10 @@ function sac_menu_link_attributes( array $atts, WP_Post $item, stdClass $args, i
 		$link_classes = $depth > 0 ? array( 'dropdown-item' ) : array( 'nav-link' );
 
 		if ( in_array( 'current-menu-item', $item->classes, true ) || in_array( 'current-menu-ancestor', $item->classes, true ) ) {
-			$link_classes[]      = 'active';
+			$link_classes[] = 'active';
+		}
+
+		if ( in_array( 'current-menu-item', $item->classes, true ) ) {
 			$atts['aria-current'] = 'page';
 		}
 
@@ -122,6 +125,8 @@ function sac_primary_menu_fallback( mixed $args = null ): void {
 		array( 'label' => __( 'About', 'sac' ), 'url' => sac_page_url( 'about' ) ),
 		array( 'label' => __( 'Events', 'sac' ), 'url' => (string) get_post_type_archive_link( 'sac_event' ) ),
 		array( 'label' => __( 'Messages', 'sac' ), 'url' => (string) get_post_type_archive_link( 'sac_sermon' ) ),
+		array( 'label' => __( 'Gallery', 'sac' ), 'url' => (string) get_post_type_archive_link( 'sac_album' ) ),
+		array( 'label' => __( 'Videos', 'sac' ), 'url' => (string) get_post_type_archive_link( 'sac_video' ) ),
 		array( 'label' => __( 'Contact', 'sac' ), 'url' => sac_page_url( 'contact' ) ),
 	);
 	?>

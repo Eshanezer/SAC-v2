@@ -3,6 +3,9 @@
 	<custom-types>
 		<custom-type translate="1">sac_event</custom-type>
 		<custom-type translate="1">sac_sermon</custom-type>
+		<custom-type translate="1">sac_ministry</custom-type>
+		<custom-type translate="1">sac_album</custom-type>
+		<custom-type translate="1">sac_video</custom-type>
 	</custom-types>
 	<custom-fields>
 		<custom-field action="translate">sac_hero_eyebrow</custom-field>
@@ -86,6 +89,15 @@
 		<custom-field action="translate">sac_give_closing_title</custom-field>
 		<custom-field action="translate">sac_give_closing_text</custom-field>
 		<custom-field action="copy">sac_event_start</custom-field>
+		<custom-field action="translate">sac_event_heading</custom-field>
+		<custom-field action="translate">sac_event_summary</custom-field>
+		<custom-field action="translate">sac_event_information</custom-field>
+		<custom-field action="copy">sac_event_cover</custom-field>
+		<custom-field action="copy">sac_event_gallery</custom-field>
+		<custom-field action="copy">sac_ministry_gallery</custom-field>
+		<custom-field action="copy">sac_album_photos</custom-field>
+		<custom-field action="copy">sac_video_youtube_url</custom-field>
+		<custom-field action="copy">sac_video_thumbnail</custom-field>
 		<custom-field action="copy">sac_event_end</custom-field>
 		<custom-field action="translate">sac_event_location</custom-field>
 		<custom-field action="translate">sac_event_address</custom-field>
@@ -95,4 +107,9 @@
 		<custom-field action="translate">sac_sermon_scripture</custom-field>
 		<custom-field action="copy">sac_sermon_video_url</custom-field>
 	</custom-fields>
+	<admin-texts>
+		<key name="sac_broadcast">
+			<key name="title" />
+		</key>
+	</admin-texts>
 </wpml-config>
